@@ -1,5 +1,6 @@
 package pages;
 
+import or.ObjectRepository;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,15 +10,15 @@ import java.util.List;
 
 public class SearchResult {
     private final WebDriver browser;
-    By resultLink = By.cssSelector(".lvtitle > a");
+    By resultLink = ObjectRepository.getORObject("resultLink");
 
-    By resultCount = By.cssSelector(".rcnt");
+    By resultCount = ObjectRepository.getORObject("resultCount");
 
     String filterScreenSize = ".//a[@class = 'search-guidance__text-item-link']//div[text() = '{{startRange}}\" - {{endRange}}\"']";
 
-    By rangeArea = By.cssSelector("#e1-18");
+    By rangeArea = ObjectRepository.getORObject("rangeArea");
 
-    By filterKeys = By.cssSelector("#ConstraintCaptionContainer #smuys b");
+    By filterKeys = ObjectRepository.getORObject("filterKeys");
 
     public WebElement getRangeArea() {
         return browser.findElement(rangeArea);
@@ -48,7 +49,7 @@ public class SearchResult {
     public List<String> getResultText() {
         List<String> textOfProduct = new ArrayList<>();
         List<WebElement> results = getAllResults();
-        for(int i=0; i<results.size(); i++){
+        for (int i = 0; i < results.size(); i++) {
             textOfProduct.add(results.get(i).getText());
         }
         return textOfProduct;

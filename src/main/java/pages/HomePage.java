@@ -1,13 +1,14 @@
 package pages;
 
+import or.ObjectRepository;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class HomePage {
-    By searchInputField = By.cssSelector(".gh-tb.ui-autocomplete-input");
+    By searchInputField = ObjectRepository.getORObject("searchInputField");
 
-    By searchButton = By.id("gh-btn");
+    By searchButton = ObjectRepository.getORObject("searchButton");
     private WebDriver browser;
     public HomePage(WebDriver browser) {
         this.browser = browser;

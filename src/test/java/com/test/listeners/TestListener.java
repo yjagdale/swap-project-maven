@@ -4,6 +4,7 @@ import java.awt.AWTException;
 import java.io.File;
 import java.io.IOException;
 
+import com.test.reporter.Reporter;
 import com.test.utilis.Utils;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -12,13 +13,12 @@ import org.testng.ITestResult;
 public class TestListener implements ITestListener {
 
     public void onFinish(ITestContext arg0) {
-        // TODO Auto-generated method stub
+        Reporter.endReport();
 
     }
 
     public void onStart(ITestContext arg0) {
-        // TODO Auto-generated method stub
-
+        Reporter.startReporter();
     }
 
     public void onTestFailedButWithinSuccessPercentage(ITestResult arg0) {

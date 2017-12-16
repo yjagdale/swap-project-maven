@@ -1,1 +1,1 @@
-mvn -DbrowserType=firefox -DenvProperty=QA -DsuiteDir=regression.xml test
+#mvn -DbrowserType=firefox -DenvProperty=QA -DsuiteDir=regression.xml test

@@ -1,11 +1,7 @@
-package com.test.readers;
+package readers;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Enumeration;
-import java.util.HashMap;
 import java.util.Properties;
 import java.util.Set;
 

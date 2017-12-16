@@ -1,5 +1,6 @@
 package pages;
 
+import or.ObjectRepository;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,12 +9,12 @@ public class ProductDetails {
 
     WebDriver browser;
 
-    By itemCondition = By.id("vi-itm-cond");
-    By timeLeft = By.id("vi-cdown_timeLeft");
-    By itemPrice = By.id("prcIsum");
-    By itemLabel = By.id("itemTitle");
-    By itemSeller = By.cssSelector("#mbgLink > span");
-    By addToCard = By.id("isCartBtn_btn");
+    By itemCondition = ObjectRepository.getORObject("itemCondition");
+    By timeLeft = ObjectRepository.getORObject("timeLeft");
+    By itemPrice = ObjectRepository.getORObject("itemPrice");
+    By itemLabel = ObjectRepository.getORObject("itemLabel");
+    By itemSeller = ObjectRepository.getORObject("itemSeller");
+    By addToCard = ObjectRepository.getORObject("addToCard");
 
     public ProductDetails(WebDriver browser) {
         this.browser = browser;
