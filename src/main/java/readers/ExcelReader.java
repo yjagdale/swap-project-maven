@@ -31,7 +31,7 @@ public class ExcelReader {
 
     public XSSFSheet getOrData() {
         String a = null;
-        String orFileName = System.getProperty("Orfile") != null ? System.getProperty("Orfile") : "data.xlsx";
+        String orFileName = System.getProperty("Orfile") != null ? System.getProperty("Orfile") : "OR.xlsx";
         try {
             System.out.println("Using "+orFileName+ " as OBJECT REPOSITORY");
             a = URLDecoder.decode(this.getClass().getClassLoader().getResource(orFileName).getPath(), "UTF-8");

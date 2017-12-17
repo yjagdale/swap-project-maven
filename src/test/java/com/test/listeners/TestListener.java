@@ -18,6 +18,8 @@ public class TestListener implements ITestListener {
     }
 
     public void onStart(ITestContext arg0) {
+        System.setProperty("hostURL", (System.getProperty("hostURL") != null ? System.getProperty("hostURL") : "http://localhost:4444/wd/hub"));
+        System.out.println("HOST IN" + (System.getProperty("hostURL")));
         Reporter.startReporter();
     }
 
