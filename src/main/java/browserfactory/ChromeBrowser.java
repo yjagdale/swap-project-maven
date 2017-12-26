@@ -15,7 +15,6 @@ public class ChromeBrowser extends Browser {
     public WebDriver getBrowser() {
         DesiredCapabilities dr = null;
         dr=DesiredCapabilities.chrome();
-        dr.setPlatform(Platform.WINDOWS);
         dr.setBrowserName("chrome");
         RemoteWebDriver driver = null;
         try {
