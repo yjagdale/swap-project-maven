@@ -16,7 +16,6 @@ public class FirefoxBrowser extends Browser{
 	public WebDriver getBrowser() {
 		DesiredCapabilities dr = null;
 		dr=DesiredCapabilities.firefox();
-		dr.setPlatform(Platform.WINDOWS);
 		dr.setBrowserName("firefox");
 		RemoteWebDriver driver = null;
 		try {
