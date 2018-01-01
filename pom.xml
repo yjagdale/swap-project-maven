@@ -56,14 +56,16 @@
                 <version>2.19.1</version>
                 <configuration>
                     <systemPropertyVariables>
-                        <browser>${browserType}</browser>
-                        <browser>${Orfile}</browser>
+
+                        <hubURL>http://localhost:4444/wd/hub</hubURL>
+                        <browserType>chrome</browserType>
+                        <browser>or</browser>
                         <webdriver.chrome.driver>src\test\resources\drivers\chromedriver.exe</webdriver.chrome.driver>
                         <webdriver.gecko.driver>src\test\resources\drivers\geckodriver.exe</webdriver.gecko.driver>
-                        <env>${envProperty}.properties</env>
+                        <env>QA.properties</env>
                     </systemPropertyVariables>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/suites/${suiteDir}</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/suites/regression.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <properties>
                         <property>
